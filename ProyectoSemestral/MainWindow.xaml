@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid >
-        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="22,25,0,0" VerticalAlignment="Top" Width="204" >
+        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="10,24,0,0" VerticalAlignment="Top" Width="231" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding=  "{Binding Titulo}" Header="Pelicula" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding=  "{Binding Titulo}" Header="Pelicula o Serie" Width="150"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding=  "{Binding Ano}" Header="Año" Width="80"></GridViewColumn>
                 </GridView>
             </ListView.View>
@@ -23,14 +23,18 @@
         <Button Content="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
 
 
-        <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536"/>
+        <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*"/>
+                <ColumnDefinition Width="225*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
 
 
 
 
-        <Button x:Name="agregar1" Content="Agregar a lista" HorizontalAlignment="Left" Margin="610,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" />
+        <Button x:Name="Guardar" Content="Agregar a lista" HorizontalAlignment="Left" Margin="610,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" />
         <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75"/>
-
 
 
 
@@ -41,5 +45,9 @@
         <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill"/>
         <Image  x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill"/>
         <Image  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill"/>
+        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="278,15,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" Margin="380,15,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="482,15,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
