@@ -16,28 +16,26 @@
             </ListView.View>
         </ListView>
 
+
         <Button x:Name="BtnOrdenar1" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="BtnOrdenar2" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
 
-       
+
+        <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536"/>
 
 
-        <Button Content="Agregar" HorizontalAlignment="Left" Margin="246,25,0,0" VerticalAlignment="Top" Width="75"/>
-        <Grid HorizontalAlignment="Left" Height="334" Margin="246,50,0,0" VerticalAlignment="Top" Width="536"/>
-
-       
 
 
-        <Button Content="Agregar" HorizontalAlignment="Left" Margin="616,389,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75"/>
-       
-        
-        
-        
-        
-        
+        <Button x:Name="agregar1" Content="Agregar a lista" HorizontalAlignment="Left" Margin="610,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" />
+        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+
+
+
+
         <Image  x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill"/>
         <Image  x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill"/>
         <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill"/>

@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProyectoSemestral
 {
     /// <summary>
-    /// Lógica de interacción para UserElement.xaml
+    /// Interaction logic for Tipo.xaml
     /// </summary>
-    public partial class UserElement : UserControl
+    public partial class Tipo : Window
     {
-        public UserElement()
+        public Tipo()
         {
             InitializeComponent();
         }

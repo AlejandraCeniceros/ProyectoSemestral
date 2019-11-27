@@ -58,8 +58,8 @@
     <Compile Include="Info.cs" />
     <Compile Include="Pelicula.cs" />
     <Compile Include="Serie.cs" />
-    <Compile Include="UserElement.xaml.cs">
-      <DependentUpon>UserElement.xaml</DependentUpon>
+    <Compile Include="Tipo.xaml.cs">
+      <DependentUpon>Tipo.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserPelicula.xaml.cs">
       <DependentUpon>UserPelicula.xaml</DependentUpon>
@@ -79,7 +79,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserElement.xaml">
+    <Page Include="Tipo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
