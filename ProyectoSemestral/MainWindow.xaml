@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid >
-        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="10,24,0,0" VerticalAlignment="Top" Width="231" >
+        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="10,24,0,0" VerticalAlignment="Top" Width="231" SelectionChanged="lstCosas_SelectionChanged" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding=  "{Binding Titulo}" Header="Pelicula o Serie" Width="150"></GridViewColumn>
@@ -19,8 +19,8 @@
 
         <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="ORD_mayormenor" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
 
 
         <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536">
@@ -34,7 +34,7 @@
 
 
         <Button x:Name="Guardar" Content="Agregar a lista" HorizontalAlignment="Left" Margin="610,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" />
-        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar_Click"/>
 
 
 

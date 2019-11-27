@@ -43,8 +43,61 @@ namespace ProyectoSemestral
 
         private void agregar1_Click(object sender, RoutedEventArgs e)
         {
+
+            //  grd_Cosas.Children.Add(new); 
+
             grd_Cosas.Children.Clear();
-          //  grd_Cosas.Children.Add(new); 
+            grd_Cosas.Children.Add(new Agregar());
+
+            btn_Agregar.Visibility = Visibility.Hidden;
+            ORD_menormayor.Visibility = Visibility.Hidden;
+            ORD_menormayor.Visibility = Visibility.Hidden;
+            BtnOrdenarAZ.Visibility = Visibility.Hidden;
+            BtnOrdenarZA.Visibility = Visibility.Hidden;
+
+            Guardar.Visibility = Visibility.Visible;
+            Cancelar.Visibility = Visibility.Visible;
+            Editar.Visibility = Visibility.Visible;
+            Eliminar.Visibility = Visibility.Visible;
+        }
+
+        private void Cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            grd_Cosas.Children.Clear();
+            btn_Agregar.Visibility = Visibility.Visible;
+            ORD_menormayor.Visibility = Visibility.Visible;
+            ORD_menormayor.Visibility = Visibility.Visible;
+            BtnOrdenarAZ.Visibility = Visibility.Visible;
+            BtnOrdenarZA.Visibility = Visibility.Visible;
+            
+            Guardar.Visibility = Visibility.Hidden;
+            Cancelar.Visibility = Visibility.Hidden;
+            Editar.Visibility = Visibility.Hidden;
+            Eliminar.Visibility = Visibility.Hidden;
+
+
+        }
+        private void lstCosas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(lstCosas.SelectedIndex != -1)
+            {
+
+                btn_Agregar.Visibility = Visibility.Hidden;
+                ORD_menormayor.Visibility = Visibility.Hidden;
+                ORD_menormayor.Visibility = Visibility.Hidden;
+                BtnOrdenarAZ.Visibility = Visibility.Hidden;
+                BtnOrdenarZA.Visibility = Visibility.Hidden;
+
+                Guardar.Visibility = Visibility.Hidden;
+                Cancelar.Visibility = Visibility.Hidden;
+                Editar.Visibility = Visibility.Visible;
+                Eliminar.Visibility = Visibility.Hidden;
+
+
+                grd_Cosas.Children.Clear();
+
+                grd_Cosas.Children.Add(new 
+
         }
     }
 }
