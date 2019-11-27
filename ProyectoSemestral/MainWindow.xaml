@@ -40,11 +40,33 @@
 
 
 
-        <Image  x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill"/>
-        <Image  x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill"/>
-        <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill"/>
-        <Image  x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill"/>
-        <Image  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill"/>
+        <Image  x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image  x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill" >
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image  x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill">
+            <Image.Effect>
+                <BlurEffect/>
+            </Image.Effect>
+
+        </Image>
+        
         <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="278,15,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" Margin="380,15,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="482,15,0,0" VerticalAlignment="Top" Width="75"/>

@@ -40,10 +40,12 @@ namespace ProyectoSemestral
 
         private void Btn_Serie_Checked(object sender, RoutedEventArgs e)
         {
-            if(Btn_Serie.IsChecked == true){
-                
+            if (Btn_Serie.IsChecked == true)
+            {
+
                 lbl_Temporadas.Visibility = Visibility.Visible;
                 box_Temporadas.Visibility = Visibility.Visible;
-;        }
+            }
+        }
     }
 }
