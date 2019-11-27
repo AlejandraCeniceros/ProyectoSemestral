@@ -23,6 +23,17 @@ namespace ProyectoSemestral
         public Visualizacion()
         {
             InitializeComponent();
+            box_Titulo_V.IsEnabled = false;
+            box_Ano_V.IsEnabled = false;
+            box_Director_V.IsEnabled = false;
+            Cbx_Genero_V.IsEnabled = false;
+            Cbx_Rating_V.IsEnabled = false;
+            box_Productor_V.IsEnabled = false;
+            box_Temporadas_V.IsEnabled = false;
+            box_Sinopsis_V.IsEnabled = false;
+            box_Descripcion_V.IsEnabled = false;
+
+            
         }
     }
 }

@@ -121,9 +121,18 @@ namespace ProyectoSemestral
                  Editar.Visibility = Visibility.Visible;
                  Eliminar.Visibility = Visibility.Hidden;
                  */
-
+                Cancelar.Visibility = Visibility.Visible;
                 grd_Cosas.Children.Clear();
                 grd_Cosas.Children.Add(new Visualizacion());
+                ((Visualizacion)(grd_Cosas.Children[0])).box_Titulo_V.Text = info[lstCosas.SelectedIndex].Titulo;
+                ((Visualizacion)(grd_Cosas.Children[0])).box_Ano_V.Text = info[lstCosas.SelectedIndex].Ano.ToString();
+                ((Visualizacion)(grd_Cosas.Children[0])).box_Productor_V.Text = info[lstCosas.SelectedIndex].Productor;
+                ((Visualizacion)(grd_Cosas.Children[0])).Cbx_Genero_V.Text = info[lstCosas.SelectedIndex].Genero;
+                ((Visualizacion)(grd_Cosas.Children[0])).box_Descripcion_V.Text = info[lstCosas.SelectedIndex].Descripcion;
+                ((Visualizacion)(grd_Cosas.Children[0])).box_Temporadas_V.Text = info[lstCosas.SelectedIndex].Temporadas.ToString();
+                ((Visualizacion)(grd_Cosas.Children[0])).Cbx_Rating_V.Text = info[lstCosas.SelectedIndex].Rating.ToString();
+
+                /*
                 btn_Agregar.Visibility = Visibility.Hidden;
                 ORD_menormayor.Visibility = Visibility.Hidden;
                 ORD_menormayor.Visibility = Visibility.Hidden;
@@ -131,27 +140,23 @@ namespace ProyectoSemestral
                 BtnOrdenarZA.Visibility = Visibility.Hidden;
 
                 Guardar.Visibility = Visibility.Hidden;
-                Cancelar.Visibility = Visibility.Visible;
                 Editar.Visibility = Visibility.Visible;
                 Eliminar.Visibility = Visibility.Visible;
 
+                */
                var ver = ((Visualizacion)(grd_Cosas.Children[0]));
-                var contenido = info[lstCosas.SelectedIndex];
+               var contenido = info[lstCosas.SelectedIndex];
+               
                 if (contenido.Tipo == "Pelicula")
                 {
-                    ver.Tipo.Text = contenido.Tipo;
-                    ver.box_Titulo_V.Text = contenido.Titulo;
-                    ver.box_Ano_V.Text = contenido.Ano.ToString();
-                    ver.box_Director_V.Text = contenido.Director;
-                    ver.Cbx_Genero_V.Text = contenido.Genero;
-                    ver.box_Sinopsis_V.Text = contenido.Sinopsis;
+                   
                     ver.Cbx_Rating_V.Text = contenido.Rating.ToString();
 
-                    ver.lbl_Temporadas_V.Visibility = Visibility.Hidden;
+                    /*ver.lbl_Temporadas_V.Visibility = Visibility.Hidden;
                     ver.box_Temporadas_V.Visibility = Visibility.Hidden;
                     ver.box_Productor_V.Visibility = Visibility.Hidden;
-                    ver.Box_Descripcion_V.Visibility = Visibility.Hidden;
-                    ver.lbl_Descripcion_V.Visibility = Visibility.Hidden;
+                    ver.box_Descripcion_V.Visibility = Visibility.Hidden;
+                    ver.lbl_Descripcion_V.Visibility = Visibility.Hidden; */
 
                     if (contenido.Rating == 1)
                     {
@@ -185,17 +190,10 @@ namespace ProyectoSemestral
                         ver.Star5_V.Visibility = Visibility.Visible;
                     }
 
-                    ver.box_Titulo_V.IsEnabled = false;
-                    ver.box_Ano_V.IsEnabled = false;
-                    ver.box_Director_V.IsEnabled = false;
-                    ver.Cbx_Genero_V.IsEnabled = false;
-                    ver.Cbx_Rating_V.IsEnabled = false;
-
                 }
-
+                /*
                 if (contenido.Tipo == "Serie")
                 {
-                    ver._Tipo.Text = contenido.Tipo;
                     ver.box_Titulo_V.Text = contenido.Titulo;
                     ver.box_Ano_V.Text = contenido.Ano.ToString();
                     ver.box_Director_V.Visibility = Visibility.Hidden;
@@ -205,7 +203,7 @@ namespace ProyectoSemestral
                     ver.Cbx_Rating_V.Text=contenido.Rating.ToString();
                     ver.box_Temporadas_V.Text = contenido.Temporadas.ToString();
                     ver.box_Productor_V.Text = contenido.Productor;
-                    ver.Box_Descripcion_V.Text = contenido.Descripcion;
+                    ver.box_Descripcion_V.Text = contenido.Descripcion;
 
                     if (contenido.Rating == 1)
                     {
@@ -255,17 +253,83 @@ namespace ProyectoSemestral
                     ver.Cbx_Rating_V.IsEnabled = false;
                     ver.box_Productor_V.IsEnabled = false;
                     ver.box_Temporadas_V.IsEnabled = false;
-                    ver.Box_Descripcion_V.IsEnabled = false;
-
+                    ver.box_Descripcion_V.IsEnabled = false;
+                    */
                 }
 
 
 
             }
 
+        private void ORD_menormayor_Click(object sender, RoutedEventArgs e)
+        {
 
+            bool sube = false;
+            do
+            {
+                sube = false;
+                for (int i = 0; i < (info.Count) - 1; i++)
+                {
+
+                    if (info[i].Ano > info[i + 1].Ano)
+                    {
+                        var temp = info[i];
+                        info[i] = info[i + 1];
+                        info[i + 1] = temp;
+                        sube = true;
+                    }
+
+                }
+
+            } while (sube);
         }
 
-       
+        private void ORD_mayormenor_Click(object sender, RoutedEventArgs e)
+        {
+            bool sube = false;
+            do
+            {
+                sube = false;
+                for (int i = 0; i < info.Count - 1; i++)
+                {
+                    if (info[i].Ano > info[i + 1].Ano)
+                    {
+                        var temp = info[i];
+                        info[i] = info[i + 1];
+                        info[i + 1] = temp;
+                        sube = true;
+                    }
+
+                }
+            } while (sube);
+        }
+
+        private void BtnOrdenarAZ_Click(object sender, RoutedEventArgs e)
+        {
+            bool sube;
+            do
+            {
+                sube = false;
+                for (int i = 0; i < (info.Count - 1); i++)
+                {
+                    if (string.Compare(info[i].Titulo, info[i + 1].Titulo) > 0)
+                    {
+                        var temp = info[i];
+                        info[i] = info[i + 1];
+                        info[i + 1] = temp;
+                        sube = true;
+                    }
+                }
+            } while (sube);
+        }
     }
+
+   
+    
 }
+
+    
+
+
+
+    

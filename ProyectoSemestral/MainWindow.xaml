@@ -17,10 +17,10 @@
         </ListView>
 
 
-        <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenarAZ_Click"/>
         <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="ORD_mayormenor" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75" Click="ORD_menormayor_Click"/>
+        <Button x:Name="ORD_mayormenor" Content ="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75" Click="ORD_mayormenor_Click"/>
 
 
         <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536">
@@ -40,29 +40,29 @@
 
 
 
-        <Image  x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill">
+        <Image Visibility="Hidden" x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill" >
+        <Image  Visibility="Hidden" x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill" >
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill">
+        <Image   Visibility="Hidden" x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill">
+        <Image  Visibility="Hidden" x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill">
+        <Image  Visibility="Hidden"  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill">
             <Image.Effect>
-                <BlurEffect/>
+                <DropShadowEffect/>
             </Image.Effect>
 
         </Image>

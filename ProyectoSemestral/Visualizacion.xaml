@@ -36,9 +36,10 @@
         </Image>
 
 
-        <TextBlock Text="Tipo:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="40" Width="449" Margin="16,21,0,0"/>
-        <TextBlock x:Name="Tipo" Text="Pelicula" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="40" Width="449" Margin="79,21,0,0"/>
-        <Label x:Name="EsSerie" Visibility="Hidden" Content="Serie" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="40" Width="449" Margin="16,10,0,0"/>
+        <Label x:Name="Label_Tipo_V" Content="Tipo:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="40" Width="449" Margin="16,21,0,0"/>
+        <TextBlock x:Name="El_tipo_V" Text="Serie o Pelicula" HorizontalAlignment="Left" Margin="108,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="30" Width="411"/>
+
+
         <Label x:Name="lbl_Titulo_V" Content="Titulo" Margin="16,66,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="56"/>
         <TextBox x:Name="box_Titulo_V" Text="" Margin="77,70,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="442" TextWrapping="Wrap" RenderTransformOrigin="0.704,0.4"/>
 
@@ -48,8 +49,8 @@
         <Label x:Name="lbl_Director_V" Content="Director(a)" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="103" Margin="5,156,0,0" />
         <TextBox x:Name="box_Director_V" Text="" Margin="108,161,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="411" Height="30" />
 
-        <Label x:Name="lbl_Productor_V" Visibility="Hidden" HorizontalAlignment="Left" Content="Productor:" VerticalAlignment="Top" Margin="206,151,0,0"/>
-        <TextBox x:Name="box_Productor_V" Visibility="Hidden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117" Margin="266,151,0,0"/>
+        <Label x:Name="lbl_Productor_V" Visibility="Hidden" HorizontalAlignment="Left" Content="Productor:" VerticalAlignment="Top" Margin="10,159,0,0"/>
+        <TextBox x:Name="box_Productor_V"  Visibility="Hidden" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="411" FontSize="15" Margin="108,161,0,0"/>
 
 
 
@@ -64,6 +65,9 @@
 
         <Label x:Name="lbl_Sinopsis_V"  FontSize="15" Content="Sinopsis" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="box_Sinopsis_V" Text="" Margin="108,200,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="411" Height="52" />
+
+        <Label x:Name="lbl_Descripcion_V"  Visibility="Hidden" FontSize="15" Content="Descripcion" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="box_Descripcion_V"  Visibility="Hidden" Text="" Margin="108,200,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="411" Height="52" />
 
         <Label x:Name="lbl_Rating_V" Content="Rating" FontSize="15"  HorizontalAlignment="Left" Margin="5,254,0,0" VerticalAlignment="Top" Height="37" Width="55" RenderTransformOrigin="0.573,1.324"/>
         <ComboBox x:Name="Cbx_Rating_V" HorizontalAlignment="Left" Height="37" Margin="77,260,0,0" Text="" VerticalAlignment="Top" Width="46">
