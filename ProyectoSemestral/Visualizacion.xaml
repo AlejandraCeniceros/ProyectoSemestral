@@ -4,54 +4,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyectoSemestral"
-             mc:Ignorable="d" 
-              mc:Ignorable="d" d:DesignWidth="490" Height="304">
+             mc:Ignorable="d"
+             Height="450" Width="800">
     <Grid Background="White" Margin="0,0,10,10">
 
 
-        <Image  x:Name="Star1" Visibility="Hidden" Margin="123,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
+        <Image  x:Name="Star1_V" Visibility="Hidden" Margin="123,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star2" Visibility="Hidden" Margin="172,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
+        <Image  x:Name="Star2_V" Visibility="Hidden" Margin="172,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star3" Visibility="Hidden" Margin="221,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
+        <Image  x:Name="Star3_V" Visibility="Hidden" Margin="221,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star4" Visibility="Hidden" Margin="270,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
+        <Image  x:Name="Star4_V" Visibility="Hidden" Margin="270,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49">
             <Image.Effect >
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  x:Name="Star5" Visibility="Hidden" Margin="319,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49" RenderTransformOrigin="0.51,0.526">
+        <Image  x:Name="Star5_V" Visibility="Hidden" Margin="319,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49" RenderTransformOrigin="0.51,0.526">
             <Image.Effect >
                 <BlurEffect/>
             </Image.Effect>
         </Image>
 
 
-        <Label Content="Agregar" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Height="40" Width="449"/>
+        <Label Content="Agregar_V" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Height="40" Width="449"/>
         <TextBlock Text="Tipo" HorizontalAlignment="Left" Margin="5,36,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.897,1" Height="20" Width="29"/>
-        <RadioButton x:Name="Btn_Pelicula" Content="Pelicula" HorizontalAlignment="Right"  FontSize="15" Margin="0,40,339,0" VerticalAlignment="Top" Checked="Btn_Pelicula_Checked" Height="16" Width="90"/>
-        <RadioButton x:Name="Btn_Serie" FontSize="15"  Content="Serie" HorizontalAlignment="Left" Margin="185,40,0,0" VerticalAlignment="Top" Checked="Btn_Serie_Checked" Height="16" Width="62"/>
+        <RadioButton x:Name="Btn_Pelicula_V" Content="Pelicula" HorizontalAlignment="Right"  FontSize="15" Margin="0,40,339,0" VerticalAlignment="Top" Checked="Btn_Pelicula_Checked" Height="16" Width="90"/>
+        <RadioButton x:Name="Btn_Serie_V" FontSize="15"  Content="Serie" HorizontalAlignment="Left" Margin="185,40,0,0" VerticalAlignment="Top" Checked="Btn_Serie_Checked" Height="16" Width="62"/>
 
-        <Label x:Name="lbl_Titulo" Content="Titulo" Margin="16,66,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="56"/>
-        <TextBox x:Name="box_Titulo" Text="" Margin="77,70,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="388" TextWrapping="Wrap" RenderTransformOrigin="0.704,0.4"/>
+        <Label x:Name="lbl_Titulo_V" Content="Titulo" Margin="16,66,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="56"/>
+        <TextBox x:Name="box_Titulo_V" Text="" Margin="77,70,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="36" Width="388" TextWrapping="Wrap" RenderTransformOrigin="0.704,0.4"/>
 
-        <Label x:Name="lbl_Ano" Content="Año" Margin="16,116,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="40" Width="145"/>
-        <TextBox x:Name="box_Ano" Text="" Margin="72,116,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="35" Width="79" TextWrapping="Wrap"/>
+        <Label x:Name="lbl_Ano_V" Content="Año" Margin="16,116,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="40" Width="145"/>
+        <TextBox x:Name="box_Ano_V" Text="" Margin="72,116,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Height="35" Width="79" TextWrapping="Wrap"/>
 
-        <Label x:Name="lbl_Director" Content="Director(a)" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="103" Margin="5,156,0,0" />
-        <TextBox x:Name="box_Director" Text="" Margin="108,161,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="201" Height="30" />
+        <Label x:Name="lbl_Director_V" Content="Director(a)" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="103" Margin="5,156,0,0" />
+        <TextBox x:Name="box_Director_V" Text="" Margin="108,161,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="201" Height="30" />
 
-        <Label x:Name="lbl_Genero" FontSize="15" Content="Genero" HorizontalAlignment="Left" Margin="156,116,0,0" VerticalAlignment="Top" Width="207"/>
-        <ComboBox Name="Cbx_Genero" HorizontalAlignment="Left" Margin="221,116,0,0" VerticalAlignment="Top" Width="120">
+        <Label x:Name="lbl_Genero_V" FontSize="15" Content="Genero" HorizontalAlignment="Left" Margin="156,116,0,0" VerticalAlignment="Top" Width="207"/>
+        <ComboBox Name="Cbx_Genero_V" HorizontalAlignment="Left" Margin="221,116,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem>accion</ComboBoxItem>
             <ComboBoxItem>terror</ComboBoxItem>
             <ComboBoxItem>drama</ComboBoxItem>
@@ -59,25 +59,25 @@
             <ComboBoxItem>comedia</ComboBoxItem>
         </ComboBox>
 
-        <Label x:Name="lbl_Sinopsis"  FontSize="15" Content="Sinopsis" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="box_Sinopsis" Text="" Margin="69,196,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="411" Height="52" />
+        <Label x:Name="lbl_Sinopsis_V"  FontSize="15" Content="Sinopsis" HorizontalAlignment="Left" Margin="5,196,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="box_Sinopsis_V" Text="" Margin="69,196,0,0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="411" Height="52" />
 
-        <Label x:Name="lbl_Rating" Content="Rating" FontSize="15"  HorizontalAlignment="Left" Margin="5,254,0,0" VerticalAlignment="Top" Height="37" Width="55" RenderTransformOrigin="0.573,1.324"/>
-        <ComboBox x:Name="Cbx_Rating" HorizontalAlignment="Left" Height="37" Margin="72,253,0,0" Text="" VerticalAlignment="Top" Width="46">
+        <Label x:Name="lbl_Rating_V" Content="Rating" FontSize="15"  HorizontalAlignment="Left" Margin="5,254,0,0" VerticalAlignment="Top" Height="37" Width="55" RenderTransformOrigin="0.573,1.324"/>
+        <ComboBox x:Name="Cbx_Rating_V" HorizontalAlignment="Left" Height="37" Margin="72,253,0,0" Text="" VerticalAlignment="Top" Width="46">
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
             <ComboBoxItem>3</ComboBoxItem>
             <ComboBoxItem>4</ComboBoxItem>
             <ComboBoxItem>5</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="lbl_Temporadas" Visibility="Hidden" FontSize="15"  Content="Temporadas:" HorizontalAlignment="Left" Margin="264,260,0,0" VerticalAlignment="Top" Width="152"/>
-        <TextBox x:Name="box_Temporadas" Visibility="Hidden" FontSize="15" HorizontalAlignment="Left" Height="37" Margin="414,253,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38"/>
+        <Label x:Name="lbl_Temporadas_V" Visibility="Hidden" FontSize="15"  Content="Temporadas:" HorizontalAlignment="Left" Margin="264,260,0,0" VerticalAlignment="Top" Width="152"/>
+        <TextBox x:Name="box_Temporadas_V" Visibility="Hidden" FontSize="15" HorizontalAlignment="Left" Height="37" Margin="414,253,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38"/>
 
-        <Label x:Name="lbl_Productor" Visibility="Hidden" HorizontalAlignment="Left" Content="Productor:" VerticalAlignment="Top" Margin="206,151,0,0"/>
-        <TextBox x:Name="box_Productor" Visibility="Hidden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117" Margin="266,151,0,0"/>
+        <Label x:Name="lbl_Productor_V" Visibility="Hidden" HorizontalAlignment="Left" Content="Productor:" VerticalAlignment="Top" Margin="206,151,0,0"/>
+        <TextBox x:Name="box_Productor_V" Visibility="Hidden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117" Margin="266,151,0,0"/>
 
-        <Label x:Name="lbl_Descripcion" Visibility="Hidden" HorizontalAlignment="Left" Content="Descripcion" VerticalAlignment="Top" Margin="10,135,0,0"/>
-        <TextBox x:Name="Box_Descripcion" Visibility="Hidden" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381" Margin="79,185,0,0"/>
+        <Label x:Name="lbl_Descripcion_V" Visibility="Hidden" HorizontalAlignment="Left" Content="Descripcion" VerticalAlignment="Top" Margin="10,135,0,0"/>
+        <TextBox x:Name="Box_Descripcion_V" Visibility="Hidden" HorizontalAlignment="Left" Height="70" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="381" Margin="79,185,0,0"/>
 
 
 

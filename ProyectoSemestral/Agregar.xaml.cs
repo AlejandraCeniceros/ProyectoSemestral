@@ -18,7 +18,7 @@ namespace ProyectoSemestral
     /// <summary>
     /// Interaction logic for Agregar.xaml
     /// </summary>
-    public partial class Agregar : Window
+    public partial class Agregar : UserControl
     {
         public Agregar()
         {

@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Info.cs" />
     <Compile Include="Pelicula.cs" />
+    <Compile Include="Peliculas.xaml.cs">
+      <DependentUpon>Peliculas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Serie.cs" />
     <Compile Include="UserPelicula.xaml.cs">
       <DependentUpon>UserPelicula.xaml</DependentUpon>
@@ -86,6 +89,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Peliculas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserPelicula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

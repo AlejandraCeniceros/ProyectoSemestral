@@ -6,19 +6,26 @@ using System.Threading.Tasks;
 
 namespace ProyectoSemestral
 {
-    class Serie : Info
+    public class Serie : Info
     {
-        public Serie() { }
-        public Serie(string titulo, int ano, string director, string genero,int temporadas, string sinopsis, int rating)
+        public Serie(string titulo, int ano, string director, string genero, string sinopsis, int rating, int temporadas, string productor, string descripcion)
         {
-            Titulo = titulo;
-            Ano = ano;
-            Director = director;
-            Genero = genero;
-            Temporadas = temporadas;
-            Sinopsis = sinopsis;
-            Rating = rating;
+            this.Titulo = titulo;
+            this.Ano = ano;
+            this.Director = director;
+            this.Genero = genero;
+            this.Sinopsis = sinopsis;
+            this.Rating = rating;
+            this.Temporadas = temporadas;
+            this.Productor = productor;
+            this.Descripcion = descripcion;
+
+            Tipo = "Serie";
         }
 
+        public override string ToString()
+        {
+            return this.Titulo + "" + this.Ano;
+        }
     }
 }

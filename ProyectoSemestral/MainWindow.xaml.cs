@@ -41,10 +41,11 @@ namespace ProyectoSemestral
 
         }
 
-        private void agregar1_Click(object sender, RoutedEventArgs e)
+        //AGREGAR NUEVO
+        private void btn_Agregar_Click(object sender, RoutedEventArgs e)
         {
 
-            //  grd_Cosas.Children.Add(new); 
+         //  grd_Cosas.Children.Add(new); 
 
             grd_Cosas.Children.Clear();
             grd_Cosas.Children.Add(new Agregar());
@@ -57,11 +58,22 @@ namespace ProyectoSemestral
 
             Guardar.Visibility = Visibility.Visible;
             Cancelar.Visibility = Visibility.Visible;
-            Editar.Visibility = Visibility.Visible;
+            Editar.Visibility = Visibility.Hidden;
             Eliminar.Visibility = Visibility.Visible;
         }
 
-        private void Cancelar_Click(object sender, RoutedEventArgs e)
+        // AGREGAR A LA LISTA / GUARDAR PUES
+        private void agregar1_Click(object sender, RoutedEventArgs e)
+        {
+            var ya = ((Agregar)(grd_Cosas.Children[0]));
+            if (ya.Btn_Pelicula.IsChecked == true)
+            {
+                info.Add(new Pelicula(ya.box_Titulo, Convert.ToInt32(ya.box_Ano.Text), ya.box_Director.Text, ya.Cbx_Genero.Text, Convert.ToInt32(ya.Cbx_Rating.Text)));
+
+            }
+        }
+
+           private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
             grd_Cosas.Children.Clear();
             btn_Agregar.Visibility = Visibility.Visible;
@@ -79,9 +91,23 @@ namespace ProyectoSemestral
         }
         private void lstCosas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(lstCosas.SelectedIndex != -1)
+            if (lstCosas.SelectedIndex != -1)
             {
 
+                /* btn_Agregar.Visibility = Visibility.Hidden;
+                 ORD_menormayor.Visibility = Visibility.Hidden;
+                 ORD_menormayor.Visibility = Visibility.Hidden;
+                 BtnOrdenarAZ.Visibility = Visibility.Hidden;
+                 BtnOrdenarZA.Visibility = Visibility.Hidden;
+
+                 Guardar.Visibility = Visibility.Hidden;
+                 Cancelar.Visibility = Visibility.Visible;
+                 Editar.Visibility = Visibility.Visible;
+                 Eliminar.Visibility = Visibility.Hidden;
+                 */
+
+                grd_Cosas.Children.Clear();
+                grd_Cosas.Children.Add(new Visualizacion());
                 btn_Agregar.Visibility = Visibility.Hidden;
                 ORD_menormayor.Visibility = Visibility.Hidden;
                 ORD_menormayor.Visibility = Visibility.Hidden;
@@ -91,13 +117,17 @@ namespace ProyectoSemestral
                 Guardar.Visibility = Visibility.Hidden;
                 Cancelar.Visibility = Visibility.Visible;
                 Editar.Visibility = Visibility.Visible;
-                Eliminar.Visibility = Visibility.Hidden;
+                Eliminar.Visibility = Visibility.Visible;
+
+                if ((Visualizacion)(grd_Cosas.Children[0])).C
 
 
-                grd_Cosas.Children.Clear();
 
-                grd_Cosas.Children.Add(new 
+            }
+
 
         }
+
+       
     }
 }
