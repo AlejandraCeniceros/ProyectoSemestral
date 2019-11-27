@@ -26,7 +26,10 @@ namespace ProyectoSemestral
         {
             InitializeComponent();
 
-            info.Add(new Info ("Psycho", 196
+            Pelicula pelicula1 = new Pelicula("Psycho", 1960, "Alfred Hitchcock", "Suspenso", "La secretaria de Phoenix, Marion Crane (Janet Leigh), se fuga después de robar $40,000 dólares de su empleador con el fin de huir con su novio...", 4);
+            Pelicula pelicula2 = new Pelicula("El cubo", 1997, "Vinezo Natali", "terror","Seis extraños deben de mantenerse unidos para lograr sobrevivir en un raro rompecabezas lleno de fatales sorpresas.", 3);
+
+            info.Add(new Info("Psycho", 1960, "Alfred Hitchcock", "Suspenso", "La secretaria de Phoenix, Marion Crane (Janet Leigh), se fuga después de robar $40,000 dólares de su empleador con el fin de huir con su novio...", 4));
         }
 
        

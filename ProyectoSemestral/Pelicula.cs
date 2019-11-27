@@ -8,8 +8,8 @@ namespace ProyectoSemestral
 {
     class Pelicula : Info
     {
-
-        public Pelicula(string titulo, int ano, string director, string genero, int temporadas, string sinopsis, int rating)
+      
+        public Pelicula(string titulo, int ano, string director, string genero, string sinopsis, int rating)
         {
             this.Titulo = titulo;
             this.Ano = ano;
@@ -18,6 +18,7 @@ namespace ProyectoSemestral
             this.Sinopsis = sinopsis;
             this.Rating = rating;
         }
+       
 
     }
 }
