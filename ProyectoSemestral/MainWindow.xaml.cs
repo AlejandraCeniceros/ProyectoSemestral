@@ -38,6 +38,9 @@ namespace ProyectoSemestral
             Star3.Visibility = Visibility.Hidden;
             Star4.Visibility = Visibility.Hidden;
             Star5.Visibility = Visibility.Hidden;
+            Guardar.Visibility = Visibility.Hidden;
+            Cancelar.Visibility = Visibility.Hidden;
+            ORD_mayormenor.Visibility = Visibility.Visible;
 
         }
 
@@ -49,10 +52,11 @@ namespace ProyectoSemestral
 
             grd_Cosas.Children.Clear();
             grd_Cosas.Children.Add(new Agregar());
+            grd_Cosas.Visibility = Visibility.Visible;
 
             btn_Agregar.Visibility = Visibility.Hidden;
             ORD_menormayor.Visibility = Visibility.Hidden;
-            ORD_menormayor.Visibility = Visibility.Hidden;
+            ORD_mayormenor.Visibility = Visibility.Hidden;
             BtnOrdenarAZ.Visibility = Visibility.Hidden;
             BtnOrdenarZA.Visibility = Visibility.Hidden;
 
@@ -102,7 +106,7 @@ namespace ProyectoSemestral
             Cancelar.Visibility = Visibility.Hidden;
             Editar.Visibility = Visibility.Hidden;
             Eliminar.Visibility = Visibility.Hidden;
-
+            ORD_mayormenor.Visibility = Visibility.Visible;
 
         }
         private void lstCosas_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -292,7 +296,7 @@ namespace ProyectoSemestral
                 sube = false;
                 for (int i = 0; i < info.Count - 1; i++)
                 {
-                    if (info[i].Ano > info[i + 1].Ano)
+                    if (info[i].Ano < info[i + 1].Ano)
                     {
                         var temp = info[i];
                         info[i] = info[i + 1];
@@ -321,6 +325,30 @@ namespace ProyectoSemestral
                     }
                 }
             } while (sube);
+        }
+
+        private void BtnOrdenarZA_Click(object sender, RoutedEventArgs e)
+        {
+            bool sube;
+            do
+            {
+                sube = false;
+                for (int i = 0; i < (info.Count - 1); i++)
+                {
+                    if (string.Compare(info[i].Titulo, info[i + 1].Titulo) < 0)
+                    {
+                        var temp = info[i];
+                        info[i] = info[i + 1];
+                        info[i + 1] = temp;
+                        sube = true;
+                    }
+                }
+            } while (sube);
+        }
+
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 

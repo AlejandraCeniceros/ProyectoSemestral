@@ -18,15 +18,15 @@
 
 
         <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenarAZ_Click"/>
-        <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenarZA_Click"/>
         <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75" Click="ORD_menormayor_Click"/>
         <Button x:Name="ORD_mayormenor" Content ="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75" Click="ORD_mayormenor_Click"/>
 
 
         <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="43*"/>
-                <ColumnDefinition Width="225*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
         </Grid>
 
@@ -66,9 +66,9 @@
             </Image.Effect>
 
         </Image>
-        
+
         <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="278,15,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
-        <Button x:Name="Editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="262,379,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="262,379,0,0" VerticalAlignment="Top" Width="75" Click="Editar_Click"/>
         <Button x:Name="Eliminar" Visibility="Hidden" Content="Eliminar" HorizontalAlignment="Left" Margin="364,379,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
