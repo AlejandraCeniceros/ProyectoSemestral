@@ -68,9 +68,22 @@ namespace ProyectoSemestral
             var ya = ((Agregar)(grd_Cosas.Children[0]));
             if (ya.Btn_Pelicula.IsChecked == true)
             {
-                info.Add(new Pelicula(ya.box_Titulo, Convert.ToInt32(ya.box_Ano.Text), ya.box_Director.Text, ya.Cbx_Genero.Text, Convert.ToInt32(ya.Cbx_Rating.Text)));
+                info.Add(new Pelicula(ya.box_Titulo.Text, Convert.ToInt32(ya.box_Ano.Text), ya.box_Director.Text, ya.Cbx_Genero.Text, ya.box_Sinopsis.Text, Convert.ToInt32(ya.Cbx_Rating.Text)));
 
             }
+
+
+            grd_Cosas.Children.Clear();
+            btn_Agregar.Visibility = Visibility.Visible;
+            ORD_menormayor.Visibility = Visibility.Visible;
+            ORD_menormayor.Visibility = Visibility.Visible;
+            BtnOrdenarAZ.Visibility = Visibility.Visible;
+            BtnOrdenarZA.Visibility = Visibility.Visible;
+
+            Guardar.Visibility = Visibility.Hidden;
+            Cancelar.Visibility = Visibility.Hidden;
+            Eliminar.Visibility = Visibility.Hidden;
+
         }
 
            private void Cancelar_Click(object sender, RoutedEventArgs e)
@@ -119,7 +132,60 @@ namespace ProyectoSemestral
                 Editar.Visibility = Visibility.Visible;
                 Eliminar.Visibility = Visibility.Visible;
 
-                if ((Visualizacion)(grd_Cosas.Children[0])).C
+               var ver = ((Visualizacion)(grd_Cosas.Children[0]));
+                var contenido = info[lstCosas.SelectedIndex];
+                if (contenido.Tipo == "Pelicula")
+                {
+                    ver._Tipo.Text = contenido.Tipo;
+                    ver.box_Titulo_V.Text = contenido.Titulo;
+                    ver.box_Ano_V.Text = contenido.Ano.ToString();
+                    ver.box_Director_V.Text = contenido.Director;
+                    ver.Cbx_Genero_V.Text = contenido.Genero;
+                    ver.box_Sinopsis_V.Text = contenido.Sinopsis;
+                    ver.Cbx_Rating_V.Text = contenido.Rating.ToString();
+
+                    if(contenido.Rating == 1)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 2)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 3)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+
+                    }
+                    if (contenido.Rating == 4)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+                        ver.Star4_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 5)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+                        ver.Star4_V.Visibility = Visibility.Visible;
+                        ver.Star5_V.Visibility = Visibility.Visible;
+                    }
+
+                    ver.box_Titulo_V.IsEnabled = false;
+                    ver.box_Ano_V.IsEnabled = false;
+                    ver.box_Director_V.IsEnabled = false;
+                    ver.Cbx_Genero_V.IsEnabled = false;
+                    ver.Cbx_Rating_V.IsEnabled = false;
+
+
+                }
+
+            }
 
 
 

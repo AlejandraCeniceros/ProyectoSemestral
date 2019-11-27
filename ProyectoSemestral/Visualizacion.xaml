@@ -36,8 +36,8 @@
         </Image>
 
 
-        <Label Content="Agregar_V" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Height="40" Width="449"/>
-        <TextBlock Text="Tipo" HorizontalAlignment="Left" Margin="5,36,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.897,1" Height="20" Width="29"/>
+        <Label Content="Agregar" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Height="40" Width="449"/>
+        <TextBlock x:Name="_Tipo" Text="Tipo" HorizontalAlignment="Left" Margin="5,36,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.897,1" Height="20" Width="29"/>
         <RadioButton x:Name="Btn_Pelicula_V" Content="Pelicula" HorizontalAlignment="Right"  FontSize="15" Margin="0,40,339,0" VerticalAlignment="Top" Checked="Btn_Pelicula_Checked" Height="16" Width="90"/>
         <RadioButton x:Name="Btn_Serie_V" FontSize="15"  Content="Serie" HorizontalAlignment="Left" Margin="185,40,0,0" VerticalAlignment="Top" Checked="Btn_Serie_Checked" Height="16" Width="62"/>
 
