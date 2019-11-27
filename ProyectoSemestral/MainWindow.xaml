@@ -7,18 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="43,373,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="151,373,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenar1" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="43,373,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenar2" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="151,373,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="43,336,0,0" VerticalAlignment="Top" Width="75"/>
-        <ListBox HorizontalAlignment="Left" Height="266" Margin="20,49,0,0" VerticalAlignment="Top" Width="118"/>
-        <ListBox HorizontalAlignment="Left" Height="266" Margin="121,49,0,0" VerticalAlignment="Top" Width="105"/>
+        <ListBox x:Name="lstTitulo"  HorizontalAlignment="Left" Height="266" Margin="20,49,0,0" VerticalAlignment="Top" Width="118" SelectionChanged="lstTitulo_SelectionChanged"/>
+        <ListBox x:Name="lstAno" HorizontalAlignment="Left" Height="266" Margin="121,49,0,0" VerticalAlignment="Top" Width="105"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,25,0,0" TextWrapping="Wrap" Text="Pelicula" VerticalAlignment="Top" Height="24" Width="96"/>
         <TextBlock HorizontalAlignment="Left" Margin="126,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="100"><Run Text="A"/><Run Text="ño"/></TextBlock>
         <Button Content="Agregar" HorizontalAlignment="Left" Margin="246,25,0,0" VerticalAlignment="Top" Width="75"/>
         <Grid HorizontalAlignment="Left" Height="334" Margin="246,50,0,0" VerticalAlignment="Top" Width="536"/>
         <Button Content="Agregar" HorizontalAlignment="Left" Margin="616,389,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75"/>
-
+        <Image  x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill"/>
+        <Image  x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill"/>
+        <Image  x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill"/>
+        <Image  x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill"/>
+        <Image  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill"/>
     </Grid>
 </Window>

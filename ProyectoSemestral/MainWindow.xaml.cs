@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace ProyectoSemestral
 {
@@ -20,9 +21,12 @@ namespace ProyectoSemestral
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<Info> info = new ObservableCollection<Info>();
         public MainWindow()
         {
             InitializeComponent();
         }
+
+       
     }
 }
