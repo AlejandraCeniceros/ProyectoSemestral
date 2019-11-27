@@ -23,6 +23,7 @@ namespace ProyectoSemestral
         public UserSerie()
         {
             InitializeComponent();
+
         }
     }
 }

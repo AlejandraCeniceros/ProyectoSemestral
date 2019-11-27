@@ -25,6 +25,8 @@ namespace ProyectoSemestral
         public MainWindow()
         {
             InitializeComponent();
+
+            info.Add(new Info ("Psycho", 196
         }
 
        
