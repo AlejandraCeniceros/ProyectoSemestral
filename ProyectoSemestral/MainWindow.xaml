@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid >
-        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="10,24,0,0" VerticalAlignment="Top" Width="231" SelectionChanged="lstCosas_SelectionChanged" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="613*"/>
+        </Grid.ColumnDefinitions>
+        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="10,24,0,0" VerticalAlignment="Top" Width="231" SelectionChanged="lstCosas_SelectionChanged" Grid.ColumnSpan="2" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding=  "{Binding Titulo}" Header="Pelicula o Serie" Width="150"></GridViewColumn>
@@ -19,11 +23,11 @@
 
         <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenarAZ_Click"/>
         <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75" Click="BtnOrdenarZA_Click"/>
-        <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75" Click="ORD_menormayor_Click"/>
-        <Button x:Name="ORD_mayormenor" Content ="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75" Click="ORD_mayormenor_Click"/>
+        <Button x:Name="ORD_menormayor" Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75" Click="ORD_menormayor_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="ORD_mayormenor" Content ="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75" Click="ORD_mayormenor_Click" Grid.ColumnSpan="2"/>
 
 
-        <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536">
+        <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="67,40,0,0" VerticalAlignment="Top" Width="536" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="0*"/>
@@ -33,43 +37,43 @@
 
 
 
-        <Button x:Name="Guardar" Content="Agregar a lista" HorizontalAlignment="Left" Margin="610,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" />
-        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="696,389,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar_Click"/>
+        <Button x:Name="Guardar" Content="Agregar a lista" HorizontalAlignment="Left" Margin="431,389,0,0" VerticalAlignment="Top" Width="81" Click="agregar1_Click" Grid.Column="1" />
+        <Button x:Name="Cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="517,389,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar_Click" Grid.Column="1"/>
 
 
 
 
 
-        <Image Visibility="Hidden" x:Name="Star1" Margin="262,307,471,63" Source="star.png" Stretch="Fill">
+        <Image Visibility="Hidden" x:Name="Star1" Margin="83,307,471,63" Source="star.png" Stretch="Fill" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  Visibility="Hidden" x:Name="Star2" Margin="321,307,412,63" Source="star.png" Stretch="Fill" >
+        <Image  Visibility="Hidden" x:Name="Star2" Margin="142,307,412,63" Source="star.png" Stretch="Fill" Grid.Column="1" >
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image   Visibility="Hidden" x:Name="Star3" Margin="380,307,353,63" Source="star.png" Stretch="Fill">
+        <Image   Visibility="Hidden" x:Name="Star3" Margin="201,307,353,63" Source="star.png" Stretch="Fill" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  Visibility="Hidden" x:Name="Star4" Margin="439,307,294,63" Source="star.png" Stretch="Fill">
+        <Image  Visibility="Hidden" x:Name="Star4" Margin="260,307,294,63" Source="star.png" Stretch="Fill" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
         </Image>
-        <Image  Visibility="Hidden"  x:Name="Star5" Margin="498,307,235,63" Source="star.png" Stretch="Fill">
+        <Image  Visibility="Hidden"  x:Name="Star5" Margin="319,307,235,63" Source="star.png" Stretch="Fill" Grid.Column="1">
             <Image.Effect>
                 <DropShadowEffect/>
             </Image.Effect>
 
         </Image>
 
-        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="278,15,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click"/>
-        <Button x:Name="Editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="262,379,0,0" VerticalAlignment="Top" Width="75" Click="Editar_Click"/>
-        <Button x:Name="Eliminar" Visibility="Hidden" Content="Eliminar" HorizontalAlignment="Left" Margin="364,379,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="99,15,0,0" VerticalAlignment="Top" Width="75" Click="btn_Agregar_Click" Grid.Column="1"/>
+        <Button x:Name="Editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="83,379,0,0" VerticalAlignment="Top" Width="75" Click="Editar_Click" Grid.Column="1"/>
+        <Button x:Name="Eliminar" Visibility="Hidden" Content="Eliminar" HorizontalAlignment="Left" Margin="185,379,0,0" VerticalAlignment="Top" Width="75" Click="Eliminar_Click" Grid.Column="1"/>
 
     </Grid>
 </Window>

@@ -30,8 +30,8 @@
             </Image.Effect>
         </Image>
         <Image  x:Name="Star5_V" Visibility="Hidden" Margin="319,252,0,0" Source="star.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="100" Height="39" Width="49" RenderTransformOrigin="0.51,0.526">
-            <Image.Effect >
-                <BlurEffect/>
+            <Image.Effect>
+                <DropShadowEffect/>
             </Image.Effect>
         </Image>
 
