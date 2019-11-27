@@ -67,6 +67,9 @@
     <Compile Include="UserSerie.xaml.cs">
       <DependentUpon>UserSerie.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Visualizacion.xaml.cs">
+      <DependentUpon>Visualizacion.xaml</DependentUpon>
+    </Compile>
     <Page Include="Agregar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserSerie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Visualizacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

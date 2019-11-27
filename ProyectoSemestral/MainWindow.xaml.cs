@@ -89,7 +89,7 @@ namespace ProyectoSemestral
                 BtnOrdenarZA.Visibility = Visibility.Hidden;
 
                 Guardar.Visibility = Visibility.Hidden;
-                Cancelar.Visibility = Visibility.Hidden;
+                Cancelar.Visibility = Visibility.Visible;
                 Editar.Visibility = Visibility.Visible;
                 Eliminar.Visibility = Visibility.Hidden;
 

@@ -68,8 +68,8 @@
         </Image>
         
         <Button x:Name="btn_Agregar" Content="Agregar" HorizontalAlignment="Left" Margin="278,15,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="Editar" Content="Editar" HorizontalAlignment="Left" Margin="380,15,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="482,15,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Editar" Visibility="Hidden" Content="Editar" HorizontalAlignment="Left" Margin="262,379,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Eliminar" Visibility="Hidden" Content="Eliminar" HorizontalAlignment="Left" Margin="364,379,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
