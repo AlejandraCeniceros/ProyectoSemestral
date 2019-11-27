@@ -8,8 +8,8 @@ namespace ProyectoSemestral
 {
     public class Pelicula : Info
     {
-      
-        public Pelicula(string titulo, int ano, string director, string genero, string sinopsis, int rating, int temporadas, string productor, string descripcion)
+
+        public Pelicula(string titulo, int ano, string director, string genero, string sinopsis, int rating)
         {
             this.Titulo = titulo;
             this.Ano = ano;
@@ -17,16 +17,12 @@ namespace ProyectoSemestral
             this.Genero = genero;
             this.Sinopsis = sinopsis;
             this.Rating = rating;
-            this.Temporadas = temporadas;
-            this.Productor = productor;
-            this.Descripcion = descripcion;
-
             Tipo = "Pelicula";
         }
 
         public override string ToString()
         {
-            return this.Titulo + ("")+ this.Ano;
+            return this.Titulo +""+ this.Ano;
         }
     }
 }

@@ -68,10 +68,13 @@ namespace ProyectoSemestral
             var ya = ((Agregar)(grd_Cosas.Children[0]));
             if (ya.Btn_Pelicula.IsChecked == true)
             {
-                info.Add(new Pelicula(ya.box_Titulo.Text, Convert.ToInt32(ya.box_Ano.Text), ya.box_Director.Text, ya.Cbx_Genero.Text, ya.box_Sinopsis.Text, Convert.ToInt32(ya.Cbx_Rating.Text)));
-
+                info.Add(new Pelicula(ya.box_Titulo.Text, Convert.ToInt32(ya.box_Ano.Text), ya.Cbx_Genero.Text, ya.box_Director.Text, ya.box_Sinopsis.Text, Convert.ToInt32(ya.Cbx_Rating.Text)));
             }
 
+            if (ya.Btn_Serie.IsChecked == true)
+            {
+                info.Add(new Serie(ya.box_Titulo.Text, Convert.ToInt32(ya.box_Ano.Text),ya.Cbx_Genero.Text,Convert.ToInt32( ya.Cbx_Rating.Text), Convert.ToInt32(ya.box_Temporadas.Text), ya.box_Productor.Text, ya.Box_Descripcion.Text));
+            }
 
             grd_Cosas.Children.Clear();
             btn_Agregar.Visibility = Visibility.Visible;
@@ -144,7 +147,13 @@ namespace ProyectoSemestral
                     ver.box_Sinopsis_V.Text = contenido.Sinopsis;
                     ver.Cbx_Rating_V.Text = contenido.Rating.ToString();
 
-                    if(contenido.Rating == 1)
+                    ver.lbl_Temporadas_V.Visibility = Visibility.Hidden;
+                    ver.box_Temporadas_V.Visibility = Visibility.Hidden;
+                    ver.box_Productor_V.Visibility = Visibility.Hidden;
+                    ver.Box_Descripcion_V.Visibility = Visibility.Hidden;
+                    ver.lbl_Descripcion_V.Visibility = Visibility.Hidden;
+
+                    if (contenido.Rating == 1)
                     {
                         ver.Star1_V.Visibility = Visibility.Visible;
                     }
@@ -182,10 +191,63 @@ namespace ProyectoSemestral
                     ver.Cbx_Genero_V.IsEnabled = false;
                     ver.Cbx_Rating_V.IsEnabled = false;
 
-
                 }
 
-            }
+                if (contenido.Tipo == "Serie")
+                {
+                    ver._Tipo.Text = contenido.Tipo;
+                    ver.box_Titulo_V.Text = contenido.Titulo;
+                    ver.box_Ano_V.Text = contenido.Ano.ToString();
+                    ver.box_Director_V.Visibility = Visibility.Hidden;
+                    ver.Cbx_Genero_V.Text = contenido.Genero;
+                    ver.box_Sinopsis_V.Visibility = Visibility.Hidden;
+                    ver.Cbx_Rating_V.Visibility = Visibility.Hidden;
+
+                    ver.lbl_Temporadas_V.Visibility = Visibility.Hidden;
+                    ver.box_Temporadas_V.Visibility = Visibility.Hidden;
+                    ver.box_Productor_V.Visibility = Visibility.Hidden;
+                    ver.Box_Descripcion_V.Visibility = Visibility.Hidden;
+                    ver.lbl_Descripcion_V.Visibility = Visibility.Hidden;
+
+                    if (contenido.Rating == 1)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 2)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 3)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+
+                    }
+                    if (contenido.Rating == 4)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+                        ver.Star4_V.Visibility = Visibility.Visible;
+                    }
+                    if (contenido.Rating == 5)
+                    {
+                        ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Visible;
+                        ver.Star4_V.Visibility = Visibility.Visible;
+                        ver.Star5_V.Visibility = Visibility.Visible;
+                    }
+
+                    ver.box_Titulo_V.IsEnabled = false;
+                    ver.box_Ano_V.IsEnabled = false;
+                    ver.box_Director_V.IsEnabled = false;
+                    ver.Cbx_Genero_V.IsEnabled = false;
+                    ver.Cbx_Rating_V.IsEnabled = false;
+
+                }
 
 
 

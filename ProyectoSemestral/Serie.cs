@@ -8,17 +8,16 @@ namespace ProyectoSemestral
 {
     public class Serie : Info
     {
-        public Serie(string titulo, int ano, string director, string genero, string sinopsis, int rating, int temporadas, string productor, string descripcion)
+        public Serie(string titulo, int ano, string genero,int rating, int temporadas, string productor, string descripcion)
         {
             this.Titulo = titulo;
             this.Ano = ano;
-            this.Director = director;
             this.Genero = genero;
-            this.Sinopsis = sinopsis;
             this.Rating = rating;
             this.Temporadas = temporadas;
             this.Productor = productor;
             this.Descripcion = descripcion;
+
 
             Tipo = "Serie";
         }

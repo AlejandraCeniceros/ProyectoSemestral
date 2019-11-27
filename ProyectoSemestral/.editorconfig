@@ -1,4 +1,13 @@
 ﻿[*.cs]
 
 # IDE0003: Quitar cualificación
-dotnet_style_qualification_for_event = true:silent
+dotnet_style_qualification_for_event = true:suggestion
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_method = false:suggestion
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_property = false:suggestion
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_field = false:suggestion
