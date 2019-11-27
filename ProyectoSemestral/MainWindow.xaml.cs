@@ -28,8 +28,8 @@ namespace ProyectoSemestral
 
             info.Add(new Pelicula("Psycho", 1960, "Alfred Hitchcock", "Suspenso", "La secretaria de Phoenix, Marion Crane (Janet Leigh), se fuga después de robar $40,000 dólares de su empleador con el fin de huir con su novio...", 5));
             info.Add(new Pelicula("El cubo", 1997, "Vinezo Natali", "terror", "Seis extraños deben de mantenerse unidos para lograr sobrevivir en un raro rompecabezas lleno de fatales sorpresas.", 3));
-            info.Add(new Serie("Stranger Thigs", 2016, "Matt Duffer", "suspenso", 3, "Cuando un niño desaparece, sus amigos, la familia y la policía se ven envueltos...", 4));
-            info.Add(new Serie("how i meet your mother", 2005, "Craig Thomas", "comedia-drama", 9, "Ted toma acción para encontrar el amor verdadero quien es ayudado por su incondicional amigo Barney, infalible en conocer mujeres, conociendo finalmente a Robin.", 4));
+            info.Add(new Serie("Stranger Thigs", 2016, "suspenso", 4, 3, "Matt Duffer", "Cuando un niño desaparece, sus amigos, la familia y la policía se ven envueltos en una serie de eventos misteriosos al tratar de encontrarlo"));
+            info.Add(new Serie("how i meet your mother", 2005, "comedia-drama",3, 9,"Pamela Fryman", "Ted toma acción para encontrar el amor verdadero quien es ayudado por su incondicional amigo Barney, infalible en conocer mujeres, conociendo finalmente a Robin."));
 
             lstCosas.ItemsSource = info;
 
@@ -139,7 +139,7 @@ namespace ProyectoSemestral
                 var contenido = info[lstCosas.SelectedIndex];
                 if (contenido.Tipo == "Pelicula")
                 {
-                    ver._Tipo.Text = contenido.Tipo;
+                    ver.Tipo.Text = contenido.Tipo;
                     ver.box_Titulo_V.Text = contenido.Titulo;
                     ver.box_Ano_V.Text = contenido.Ano.ToString();
                     ver.box_Director_V.Text = contenido.Director;
@@ -199,30 +199,37 @@ namespace ProyectoSemestral
                     ver.box_Titulo_V.Text = contenido.Titulo;
                     ver.box_Ano_V.Text = contenido.Ano.ToString();
                     ver.box_Director_V.Visibility = Visibility.Hidden;
+                    ver.lbl_Director_V.Visibility = Visibility.Hidden;
                     ver.Cbx_Genero_V.Text = contenido.Genero;
                     ver.box_Sinopsis_V.Visibility = Visibility.Hidden;
-                    ver.Cbx_Rating_V.Visibility = Visibility.Hidden;
-
-                    ver.lbl_Temporadas_V.Visibility = Visibility.Hidden;
-                    ver.box_Temporadas_V.Visibility = Visibility.Hidden;
-                    ver.box_Productor_V.Visibility = Visibility.Hidden;
-                    ver.Box_Descripcion_V.Visibility = Visibility.Hidden;
-                    ver.lbl_Descripcion_V.Visibility = Visibility.Hidden;
+                    ver.Cbx_Rating_V.Text=contenido.Rating.ToString();
+                    ver.box_Temporadas_V.Text = contenido.Temporadas.ToString();
+                    ver.box_Productor_V.Text = contenido.Productor;
+                    ver.Box_Descripcion_V.Text = contenido.Descripcion;
 
                     if (contenido.Rating == 1)
                     {
                         ver.Star1_V.Visibility = Visibility.Visible;
+                        ver.Star2_V.Visibility = Visibility.Hidden;
+                        ver.Star3_V.Visibility = Visibility.Hidden;
+                        ver.Star4_V.Visibility = Visibility.Hidden;
+                        ver.Star5_V.Visibility = Visibility.Hidden;
                     }
                     if (contenido.Rating == 2)
                     {
                         ver.Star1_V.Visibility = Visibility.Visible;
                         ver.Star2_V.Visibility = Visibility.Visible;
+                        ver.Star3_V.Visibility = Visibility.Hidden;
+                        ver.Star4_V.Visibility = Visibility.Hidden;
+                        ver.Star5_V.Visibility = Visibility.Hidden;
                     }
                     if (contenido.Rating == 3)
                     {
                         ver.Star1_V.Visibility = Visibility.Visible;
                         ver.Star2_V.Visibility = Visibility.Visible;
                         ver.Star3_V.Visibility = Visibility.Visible;
+                        ver.Star4_V.Visibility = Visibility.Hidden;
+                        ver.Star5_V.Visibility = Visibility.Hidden;
 
                     }
                     if (contenido.Rating == 4)
@@ -231,6 +238,7 @@ namespace ProyectoSemestral
                         ver.Star2_V.Visibility = Visibility.Visible;
                         ver.Star3_V.Visibility = Visibility.Visible;
                         ver.Star4_V.Visibility = Visibility.Visible;
+                        ver.Star5_V.Visibility = Visibility.Hidden;
                     }
                     if (contenido.Rating == 5)
                     {
@@ -243,9 +251,11 @@ namespace ProyectoSemestral
 
                     ver.box_Titulo_V.IsEnabled = false;
                     ver.box_Ano_V.IsEnabled = false;
-                    ver.box_Director_V.IsEnabled = false;
                     ver.Cbx_Genero_V.IsEnabled = false;
                     ver.Cbx_Rating_V.IsEnabled = false;
+                    ver.box_Productor_V.IsEnabled = false;
+                    ver.box_Temporadas_V.IsEnabled = false;
+                    ver.Box_Descripcion_V.IsEnabled = false;
 
                 }
 
