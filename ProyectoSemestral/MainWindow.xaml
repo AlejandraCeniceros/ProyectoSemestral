@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:ProyectoSemestral"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ListView x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="22,25,0,0" VerticalAlignment="Top" Width="204" >
+    <Grid >
+        <ListView Background="Azure"  x:Name="lstCosas" HorizontalAlignment="Left" Height="297" Margin="22,25,0,0" VerticalAlignment="Top" Width="204" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding=  "{Binding Titulo}" Header="Pelicula" Width="120"></GridViewColumn>
@@ -17,10 +17,10 @@
         </ListView>
 
 
-        <Button x:Name="BtnOrdenar1" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="BtnOrdenar2" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenarAZ" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="BtnOrdenarZA" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="34,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="△" HorizontalAlignment="Left" Margin="151,336,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="▽" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="75"/>
 
 
         <Grid x:Name="grd_Cosas" HorizontalAlignment="Left" Height="334" Margin="246,40,0,0" VerticalAlignment="Top" Width="536"/>

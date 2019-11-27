@@ -55,18 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Agregar.xaml.cs">
+      <DependentUpon>Agregar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Info.cs" />
     <Compile Include="Pelicula.cs" />
     <Compile Include="Serie.cs" />
-    <Compile Include="Tipo.xaml.cs">
-      <DependentUpon>Tipo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserPelicula.xaml.cs">
       <DependentUpon>UserPelicula.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserSerie.xaml.cs">
       <DependentUpon>UserSerie.xaml</DependentUpon>
     </Compile>
+    <Page Include="Agregar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,10 +83,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Tipo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserPelicula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

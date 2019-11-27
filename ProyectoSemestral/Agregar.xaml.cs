@@ -15,13 +15,25 @@ using System.Windows.Shapes;
 namespace ProyectoSemestral
 {
     /// <summary>
-    /// Interaction logic for Tipo.xaml
+    /// Interaction logic for Agregar.xaml
     /// </summary>
-    public partial class Tipo : Window
+    public partial class Agregar : Window
     {
-        public Tipo()
+        public Agregar()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Pelicula_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Btn_Pelicula.IsChecked == true){
+
+
+        }
+
+        private void Btn_Serie_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

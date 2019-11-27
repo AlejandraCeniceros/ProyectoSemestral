@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProyectoSemestral.Agregar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoSemestral"
+        mc:Ignorable="d"
+        Title="Agregar" Height="450" Width="800">
+    <Grid>
+
+        <TextBlock Text="Agregar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <TextBlock Text="Tipo" HorizontalAlignment="Left" Margin="15,56,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.897,1"/>
+        <RadioButton x:Name="Btn_Pelicula" Content="Pelicula" HorizontalAlignment="Left" Margin="60, 60, 0, 0" VerticalAlignment="Top" Checked="Btn_Pelicula_Checked"/>
+        <RadioButton x:Name="Btn_Serie" Content="Serie" HorizontalAlignment="Left" Margin="126,60,0,0" VerticalAlignment="Top" Checked="Btn_Serie_Checked"/>
+
+    </Grid>
+</Window>
